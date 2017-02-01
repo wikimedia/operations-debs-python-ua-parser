@@ -1,0 +1,5 @@
+ua-parser (0.7.2-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Andrew Otto (WMF) <otto@wikimedia.org>  Wed, 01 Feb 2017 13:38:38 -0500

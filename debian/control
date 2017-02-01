@@ -1,0 +1,11 @@
+Source: ua-parser
+Maintainer: Andrew Otto (WMF) <otto@wikimedia.org>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 8), python-yaml
+Standards-Version: 3.9.3
+
+Package: python-ua-parser
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Python port of Browserscope's user agent parser
