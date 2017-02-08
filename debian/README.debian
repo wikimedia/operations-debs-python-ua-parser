@@ -1,0 +1,7 @@
+Upstream's setup.py needs to be able to git submodule update uap-core, and then
+use that to compile _regexes.py from regexes.yaml.  However, setup.py's
+build_regexes step returns with no error if the .git does not exist.
+
+Patches here modify setup.py during build so that the build happens from
+the submodule source included source package, and is able to compile
+_regexes.py properly.
