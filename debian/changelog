@@ -1,3 +1,9 @@
+ua-parser (0.8.0-1) unstable; urgency=low
+
+  * Release of 0.8.0
+
+ -- Andrew Otto (WMF) <otto@wikimedia.org>  Wed, 21 May 2018 14:30:24 -0500
+
 ua-parser (0.7.2-2) unstable; urgency=low
 
   * Adding copyright, fixing missing _regexes.py
