@@ -1,3 +1,9 @@
+ua-parser (0.8.0+core0.6.9~1-1) buster-wikimedia; urgency=low
+
+  * Update of uap-core submodule regexes to pre-release of 0.6.9
+
+ -- Andrew Otto (WMF) <otto@wikimedia.org>  Mon, 16 Sep 2019 14:00:58 +0000
+
 ua-parser (0.8.0-1) unstable; urgency=low
 
   * Release of 0.8.0

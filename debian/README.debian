@@ -1,3 +1,10 @@
+python-ua-parser is debian packaging for the ua-parser/uap-python library.
+
+uap-python includes the uap-core regexes via a git submodule.  This package does
+not rely on git during build. Instead, it is expected that you `git submodule update --init`
+before building.  debian/gbp.conf specifies that the submodule source should also
+be included in the source package.
+
 Upstream's setup.py needs to be able to git submodule update uap-core, and then
 use that to compile _regexes.py from regexes.yaml.  However, setup.py's
 build_regexes step returns with no error if the .git does not exist.
@@ -5,3 +12,14 @@ build_regexes step returns with no error if the .git does not exist.
 Patches here modify setup.py during build so that the build happens from
 the submodule source included source package, and is able to compile
 _regexes.py properly.
+
+
+To update to a new uap-core version:
+
+- Merge from upstream, or manually update the uap-core submodule.
+
+- Bump version in changelog to include version of uap-python and uap-core,
+  e.g. 0.8.0+core0.6.8-1.
+
+- On a WMF build server:
+  GIT_PBUILDER_AUTOCONF=no DIST=buster gbp buildpackage -sa -us -uc --git-builder=git-pbuilder
