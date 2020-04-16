@@ -1,3 +1,9 @@
+ua-parser (0.10.0+core0.8.0~1-1) stretch-wikimedia; urgency=low
+
+  * Release 0.10.0 at uap-core 0.8.0
+
+ -- Andrew Otto (WMF) <otto@wikimedia.org>  Thu, 16 Apr 2020 19:13:59 +0000
+
 ua-parser (0.8.0+core0.6.9~1-1) buster-wikimedia; urgency=low
 
   * Update of uap-core submodule regexes to pre-release of 0.6.9

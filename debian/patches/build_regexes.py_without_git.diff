@@ -2,29 +2,30 @@ Index: python-ua-parser/setup.py
 ===================================================================
 --- python-ua-parser.orig/setup.py
 +++ python-ua-parser/setup.py
-@@ -58,12 +58,12 @@ class build_regexes(Command):
-
+@@ -64,12 +64,12 @@ class build_regexes(Command):
+ 
      def run(self):
          work_path = self.work_path
--        if not os.path.exists(os.path.join(work_path, '.git')):
+-        if not os.path.exists(os.path.join(work_path, ".git")):
 -            return
-+        #if not os.path.exists(os.path.join(work_path, '.git')):
++        #if not os.path.exists(os.path.join(work_path, ".git")):
 +        #    return
-
--        log.info('initializing git submodules')
--        check_output(['git', 'submodule', 'init'], cwd=work_path)
--        check_output(['git', 'submodule', 'update'], cwd=work_path)
-+        #log.info('initializing git submodules')
-+        #check_output(['git', 'submodule', 'init'], cwd=work_path)
-+        #check_output(['git', 'submodule', 'update'], cwd=work_path)
-
-         yaml_src = os.path.join(work_path, 'uap-core', 'regexes.yaml')
+ 
+-        log.info("initializing git submodules")
+-        check_output(["git", "submodule", "init"], cwd=work_path)
+-        check_output(["git", "submodule", "update"], cwd=work_path)
++        #log.info("initializing git submodules")
++        #check_output(["git", "submodule", "init"], cwd=work_path)
++        #check_output(["git", "submodule", "update"], cwd=work_path)
+ 
+         yaml_src = os.path.join(work_path, "uap-core", "regexes.yaml")
          if not os.path.exists(yaml_src):
-@@ -76,6 +76,7 @@ class build_regexes(Command):
-             return text.encode('utf8')
-
+@@ -83,7 +83,7 @@ class build_regexes(Command):
+             return text.encode("utf8")
+ 
          import yaml
+-
 +        check_output(['mkdir', '-p', os.path.join(self.build_lib, 'ua_parser')])
-         py_dest = os.path.join(self.build_lib, 'ua_parser', '_regexes.py')
-
-         log.info('compiling regexes.yaml -> _regexes.py')
+         py_dest = os.path.join(self.build_lib, "ua_parser", "_regexes.py")
+ 
+         log.info("compiling regexes.yaml -> _regexes.py")
